@@ -1,5 +1,5 @@
 {% extends 'blog-base.html' %}
-
+{% load static %}
 {% block content %}
 {% for post in most_popular_posts %}
 <div class="flex-fill" style="margin-right: 30px;">
@@ -10,7 +10,7 @@
           <img src="{{post.image_url}}" class="card-img rounded-0" alt="">
         {% else %}
           <img src="https://dvmn.org/filer/canonical/1569944855/354/" class="card-img-top" alt="...">
-          <img src="{% static "img/banner/hero-banner.png" %}" alt=""></a>
+         <img src="{% static "img/banner/hero-banner.png" %}" alt=""></a>
         {% endif %}
       </a>
     </div>
