@@ -46,9 +46,14 @@
 </div><br /> 
 {% endfor %}               
 {% endblock %}
-
-{% block Start_Blog_Post_Area_1 %}
-{% for post in fresh_posts %}
+<section class="blog-post-area section-margin mt-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="single-recent-blog-post">
+          {% block Start_Blog_Post_Area_1 %}
+          {% for post in fresh_posts %}
+        </div>
 <div class="thumb">
   {% if post.image_url %}
     <img src="{{post.image_url}}" class="img-fluid" alt="...">
@@ -69,9 +74,10 @@
 </div>
 {% endfor %}
 {% endblock %}
-
-{% block Start_Blog_Post_Area_2 %}
-{% for post in page_posts %}
+<div class="single-recent-blog-post">
+  {% block Start_Blog_Post_Area_2 %}
+  {% for post in page_posts %}
+</div>
 <div class="thumb">
   {% if post.image_url %}
     <img src="{{post.image_url}}" class="img-fluid" alt="...">
@@ -153,3 +159,6 @@
     </div>
   </div>
 {% endblock %}
+</div>
+        </div>
+      </section>
