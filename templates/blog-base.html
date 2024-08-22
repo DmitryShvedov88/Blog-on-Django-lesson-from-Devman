@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% block button-title %}
     {% endblock %}
-    {% block stylesheet-title %}
-    {% endblock %}  
+    <link rel="icon" href="{% static "img/favicon.png" %}" type="image/png">
+    <link rel="stylesheet" href="{% static "styles.min.css" %}">
   </head>
   <body>
     <!--================Header Menu Area =================-->
@@ -84,7 +84,7 @@
       <!--================ End Blog Post Area =================-->
     </main>
     <!-- ================ contact section start ================= -->
-    {% block section-margin--small section-margin %}
+    {% block section-margin-small %}
     {% endblock %}
     <!-- ================ contact section end ================= -->
     <!--================ Start Footer Area =================-->
