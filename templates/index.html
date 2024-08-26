@@ -50,43 +50,43 @@
           {% block Start_Blog_Post_Area_1 %}
           {% for post in fresh_posts %}
         </div>
-<div class="thumb">
-  {% if post.image_url %}
-    <img src="{{post.image_url}}" class="img-fluid" alt="...">
-  {% else %}
-    <img src="https://dvmn.org/filer/canonical/1569944855/354/" class="card-img-top" alt="...">
-    <img src="{% static "img/banner/hero-banner.png" %}" alt=""></a>
-  {% endif %}
-  <ul class="thumb-info" style=" max-width: 550px">
-    <li><a href="#"><i class="ti-user"></i>{{post.author}}</a></li>
-    <li><a href="#"><i class="ti-notepad"></i>{{post.published_at}}</a></li>
-    <li><a href="#"><i class="ti-themify-favicon"></i>{{post.comments_amount}}</a></li>
-  </ul>
-</div>
-<div class="details mt-20">
-  <h3>{{post.title}}</h3>
-  <p>{{post.text|truncatechars:200}}</p>
-  <a class="button" href="{% url 'post_detail' slug=post.slug %}" >Read More <i class="ti-arrow-right"></i></a>   
-</div>
-{% endfor %}
-{% endblock %}
-<div class="single-recent-blog-post">
-  {% block Start_Blog_Post_Area_2 %}
-  {% for post in page_posts %}
-</div>
-<div class="thumb">
-  {% if post.image_url %}
-    <img src="{{post.image_url}}" class="img-fluid" alt="...">
-  {% else %}
-    <img src="https://dvmn.org/filer/canonical/1569944855/354/" class="card-img-top" alt="...">
-    <img src="{% static "img/banner/hero-banner.png" %}" alt=""></a>
-  {% endif %}
-  <ul class="thumb-info" style=" max-width: 550px">
-    <li><a href="#"><i class="ti-user"></i>{{post.author}}</a></li>
-    <li><a href="#"><i class="ti-notepad"></i>{{post.published_at}}</a></li>
-    <li><a href="#"><i class="ti-themify-favicon"></i>{{post.comments_amount}}</a></li>
-  </ul>
-</div>
+        <div class="thumb">
+          {% if post.image_url %}
+            <img src="{{post.image_url}}" class="img-fluid" alt="...">
+          {% else %}
+            <img src="https://dvmn.org/filer/canonical/1569944855/354/" class="card-img-top" alt="...">
+            <img src="{% static "img/banner/hero-banner.png" %}" alt=""></a>
+          {% endif %}
+          <ul class="thumb-info" style=" max-width: 550px">
+            <li><a href="#"><i class="ti-user"></i>{{post.author}}</a></li>
+            <li><a href="#"><i class="ti-notepad"></i>{{post.published_at}}</a></li>
+            <li><a href="#"><i class="ti-themify-favicon"></i>{{post.comments_amount}}</a></li>
+          </ul>
+        </div>
+        <div class="details mt-20">
+          <h3>{{post.title}}</h3>
+          <p>{{post.text|truncatechars:200}}</p>
+          <a class="button" href="{% url 'post_detail' slug=post.slug %}" >Read More <i class="ti-arrow-right"></i></a>   
+        </div>
+        {% endfor %}
+        {% endblock %}
+        <div class="single-recent-blog-post">
+          {% block Start_Blog_Post_Area_2 %}
+          {% for post in page_posts %}
+        </div>
+        <div class="thumb">
+          {% if post.image_url %}
+            <img src="{{post.image_url}}" class="img-fluid" alt="...">
+          {% else %}
+            <img src="https://dvmn.org/filer/canonical/1569944855/354/" class="card-img-top" alt="...">
+            <img src="{% static "img/banner/hero-banner.png" %}" alt=""></a>
+          {% endif %}
+          <ul class="thumb-info" style=" max-width: 550px">
+            <li><a href="#"><i class="ti-user"></i>{{post.author}}</a></li>
+            <li><a href="#"><i class="ti-notepad"></i>{{post.published_at}}</a></li>
+            <li><a href="#"><i class="ti-themify-favicon"></i>{{post.comments_amount}}</a></li>
+          </ul>
+        </div>
 <div class="details mt-20">
   <h3>{{post.title}}</h3>
   <p>{{post.text|truncatechars:200}}</p>
