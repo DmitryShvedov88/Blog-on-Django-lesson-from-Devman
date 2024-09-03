@@ -1,4 +1,5 @@
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -7,6 +8,7 @@
     {% block button-title %}
     {% endblock %}
     <link rel="icon" href="{% static "img/favicon.png" %}" type="image/png">
+
     <link rel="stylesheet" href="{% static "styles.min.css" %}">
   </head>
   <body>
@@ -37,7 +39,8 @@
       </div>
     </header>
     <!--================Header Menu Area End =================-->
-   
+    {% block site-main %}
+    {% endblock %}
     <!--================Hero Banner start =================-->
     {% block Hero-Banner%}
     {% endblock %}
@@ -46,31 +49,19 @@
     <!--================Hero Banner end =================-->  
 
     <!--================ Blog slider start =================-->
-      <section class="mb-30px">
-        <div class="container">
-          <div class="d-flex"> 
-          {% block Blog_slider_start %}
-          {% endblock %}      
-          </div>
-        </div>
-      </section>
+    {% block Blog_slider_start %}
+    {% endblock %}      
     <!--================ Blog slider end =================-->
 
     <!--================ Start Blog Post Area =================-->
-      <section class="blog-post-area section-margin mt-4">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
-              {% block Start_Blog_Post_Area_1 %}
-              {% endblock %}
+    {% block Start_Blog_Post_Area_1 %}
+    {% endblock %}
     <!--================ End Blog Post Area =================-->
 
     <!-- Start Blog Post Siddebar -->
-            {% block Start-Blog-Post-Siddebar %} 
-            {% endblock %}
+    {% block Start-Blog-Post-Siddebar %} 
+    {% endblock %}
     <!-- End Blog Post Siddebar -->
-      </section>
-    </main>
 
     <!-- ================ contact section start ================= -->
     {% block section-margin-small %}
