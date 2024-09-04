@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="{% static "styles.min.css" %}">
   </head>
+  {% block main %}
   <body>
     <!--================Header Menu Area =================-->
     <header class="header_area">
@@ -133,4 +134,5 @@
      
     <script src="{% static "scripts.js" %}"></script>  
   </body>
+  {% endblock %}
 </html>
