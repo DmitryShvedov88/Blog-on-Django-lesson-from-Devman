@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-{% block main %}
+{% comment %} {% block main %} {% endcomment %}
   <html lang="en">
     <head>
       <meta charset="UTF-8">
@@ -9,7 +9,6 @@
       {% block button-title %}
       {% endblock %}
       <link rel="icon" href="{% static "img/favicon.png" %}" type="image/png">
-
       <link rel="stylesheet" href="{% static "styles.min.css" %}">
     </head>
   
@@ -136,4 +135,4 @@
       <script src="{% static "scripts.js" %}"></script>  
     </body>
   </html>
-{% endblock %}
+{% comment %} {% endblock %} {% endcomment %}
